@@ -1,0 +1,825 @@
+/* ==============================================
+   PALETA DE CORES — Hélio Junior Corretor
+   ============================================== */
+:root {
+    --dourado:        #C9A84C;
+    --dourado-claro:  #E8C96A;
+    --dourado-escuro: #A07830;
+    --navy-escuro:    #060F1E;
+    --navy-medio:     #0D1B33;
+    --navy-card:      #111F3A;
+    --navy-borda:     #1A2E50;
+    --branco:         #FFFFFF;
+}
+
+
+/* ==============================================
+   RESET E BASE
+   ============================================== */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--navy-escuro);
+    color: var(--branco);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==============================================
+   CLASSES UTILITÁRIAS
+   ============================================== */
+.texto-dourado    { color: var(--dourado); }
+.bg-navy-escuro   { background-color: var(--navy-escuro); }
+.bg-navy-medio    { background-color: var(--navy-medio); }
+
+
+/* ==============================================
+   TIPOGRAFIA
+   ============================================== */
+.titulo-hero {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--branco);
+}
+
+.titulo-secao {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--branco);
+    line-height: 1.2;
+}
+
+
+/* ==============================================
+   HEADER
+   ============================================== */
+#header {
+    background: transparent;
+}
+
+#header.scrolled {
+    background-color: rgba(6, 15, 30, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==============================================
+   LOGO
+   ============================================== */
+
+/* Header — compacta, mix-blend remove o fundo escuro da imagem */
+.logo-header {
+    height: 46px;
+    width: auto;
+    mix-blend-mode: screen;
+    filter: brightness(1.1) contrast(1.05);
+    transition: opacity 0.2s;
+}
+.logo-header:hover {
+    opacity: 0.85;
+}
+
+/* Footer — maior e com brilho */
+.logo-footer {
+    height: 80px;
+    width: auto;
+    mix-blend-mode: screen;
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Ícone legado (mantido caso precise em outro lugar) */
+.logo-icone {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy-escuro);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(201, 168, 76, 0.3);
+}
+.logo-icone.small {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    border-radius: 0.375rem;
+}
+
+
+/* ==============================================
+   BOTÕES
+   ============================================== */
+.btn-dourado {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+    color: var(--navy-escuro);
+    padding: 0.625rem 1.4rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 2px 12px rgba(201, 168, 76, 0.3);
+}
+.btn-dourado:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.5);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 0.9rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+}
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.55);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--branco);
+    padding: 0.9rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1.5px solid rgba(201, 168, 76, 0.4);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn-outline:hover {
+    border-color: var(--dourado);
+    color: var(--dourado);
+}
+
+.btn-whatsapp-grande {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 1.1rem 2.4rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4);
+}
+.btn-whatsapp-grande:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+}
+
+
+/* ==============================================
+   BADGE CRECI
+   ============================================== */
+.badge-creci {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: var(--dourado);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 50px;
+    letter-spacing: 0.03em;
+}
+
+
+/* ==============================================
+   HERO
+   ============================================== */
+.hero-bg {
+    background: radial-gradient(ellipse at 70% 50%, #0D2247 0%, var(--navy-escuro) 65%);
+}
+
+.ornamento-hero {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.07) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.stat-item { text-align: left; }
+
+.stat-numero {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dourado);
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    max-width: 120px;
+}
+
+.stat-divisor {
+    width: 1px;
+    height: 40px;
+    background: rgba(201, 168, 76, 0.25);
+    align-self: center;
+}
+
+
+/* ==============================================
+   FOTO DE PERFIL (Seção Sobre)
+   ============================================== */
+
+/* Wrapper — posicionamento do selo CRECI */
+.foto-perfil-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Foto circular com borda dourada */
+.foto-perfil-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background:
+        linear-gradient(var(--navy-medio), var(--navy-medio)) padding-box,
+        linear-gradient(135deg, var(--dourado), var(--dourado-escuro), var(--dourado)) border-box;
+    box-shadow:
+        0 0 0 6px rgba(201, 168, 76, 0.12),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.foto-perfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+    background-color: var(--navy-medio);
+}
+
+.selo-creci {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(6, 15, 30, 0.9);
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(8px);
+}
+
+.diferencial-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+
+/* ==============================================
+   CARDS DE IMÓVEIS
+   ============================================== */
+.card-imovel {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-borda);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+}
+.card-imovel:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 168, 76, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(201, 168, 76, 0.1);
+}
+
+.card-imovel.destaque {
+    border-color: rgba(201, 168, 76, 0.35);
+    background: linear-gradient(160deg, #111F3A, #0D1B33);
+}
+
+.card-imovel-icone {
+    width: 3.25rem;
+    height: 3.25rem;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dourado);
+    margin-bottom: 1rem;
+}
+
+.destaque-icone {
+    background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
+    border: none;
+    color: var(--navy-escuro);
+}
+
+.badge-destaque {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
+    color: var(--navy-escuro);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.link-saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--dourado);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: gap 0.2s, opacity 0.2s;
+    opacity: 0.8;
+}
+.link-saiba-mais:hover {
+    gap: 0.6rem;
+    opacity: 1;
+}
+
+
+/* ==============================================
+   CARDS DE DEPOIMENTOS
+   ============================================== */
+.card-depoimento {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-borda);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+}
+.card-depoimento:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 76, 0.3);
+}
+.card-depoimento::before {
+    content: '"';
+    position: absolute;
+    top: 0.25rem;
+    right: 1.25rem;
+    font-size: 5.5rem;
+    color: var(--dourado);
+    opacity: 0.06;
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.avatar-dep {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
+    color: var(--navy-escuro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+
+/* ==============================================
+   CTA FINAL
+   ============================================== */
+.cta-bg {
+    background: radial-gradient(ellipse at 30% 50%, #0D2247 0%, var(--navy-escuro) 65%);
+    border-top: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.ornamento-cta {
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+
+/* ==============================================
+   BOTÃO FLUTUANTE WHATSAPP
+   ============================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    z-index: 9999;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulso 2.5s infinite;
+}
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7);
+    animation: none;
+}
+
+@keyframes pulso {
+    0%,  100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); }
+    50%        { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+}
+
+
+/* ==============================================
+   ANIMAÇÕES DE ENTRADA
+   ============================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==============================================
+   RESPONSIVIDADE
+   ============================================== */
+@media (max-width: 640px) {
+    .btn-whatsapp,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-foto {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .stat-divisor { display: none; }
+}
+
+
+/* ==============================================
+   MODAL
+   ============================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(6px);
+    z-index: 99999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem 3rem;
+    overflow-y: auto;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-container {
+    background: var(--navy-medio);
+    border: 1px solid var(--navy-borda);
+    border-radius: 1.25rem;
+    width: 100%;
+    max-width: 960px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 168, 76, 0.08);
+    margin-top: 1rem;
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.75rem 2rem 1.25rem;
+    border-bottom: 1px solid var(--navy-borda);
+    position: sticky;
+    top: 0;
+    background: var(--navy-medio);
+    z-index: 1;
+}
+
+.modal-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--branco);
+    line-height: 1.2;
+}
+
+.modal-subtitulo {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 0.3rem;
+}
+
+.modal-fechar {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--branco);
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.modal-fechar:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.modal-grid {
+    padding: 1.5rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Mensagem quando não há imóveis cadastrados */
+.modal-vazio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.9rem;
+}
+.modal-vazio i {
+    font-size: 2.5rem;
+    color: rgba(201, 168, 76, 0.25);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+/* ==============================================
+   CARD DE IMÓVEL (dentro do modal)
+   ============================================== */
+.card-prop {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-borda);
+    border-radius: 0.875rem;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.card-prop:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 168, 76, 0.35);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Foto */
+.card-prop-foto {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+    background: var(--navy-escuro);
+    flex-shrink: 0;
+}
+.card-prop-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s;
+}
+.card-prop:hover .card-prop-foto img {
+    transform: scale(1.04);
+}
+
+/* Placeholder quando não tem foto */
+.placeholder-foto-prop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+.placeholder-foto-prop i {
+    font-size: 2.25rem;
+    color: rgba(201, 168, 76, 0.25);
+}
+.placeholder-foto-prop span {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.25);
+    line-height: 1.4;
+}
+
+/* Badge tipo (ex: Apartamento, Terreno) */
+.card-prop-badge {
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
+    color: var(--navy-escuro);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Código do imóvel */
+.card-prop-cod {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: rgba(6, 15, 30, 0.85);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+/* Corpo do card */
+.card-prop-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-prop-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--branco);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+}
+
+/* Localização */
+.card-prop-local {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.85rem;
+}
+
+/* Specs (quartos, suítes, banheiros, área, garagem) */
+.card-prop-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+}
+.card-prop-specs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(201, 168, 76, 0.09);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    color: var(--dourado);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+/* Descrição */
+.card-prop-desc {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.55;
+    margin-bottom: 0.85rem;
+    flex: 1;
+}
+
+/* Preço */
+.card-prop-preco {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dourado);
+    margin-bottom: 1rem;
+}
+
+/* Botão WhatsApp por imóvel */
+.btn-whatsapp-prop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    margin-top: auto;
+}
+.btn-whatsapp-prop:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+/* ==============================================
+   RESPONSIVIDADE DO MODAL
+   ============================================== */
+@media (max-width: 640px) {
+    .modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .modal-container {
+        border-radius: 1.25rem 1.25rem 0 0;
+        max-height: 92vh;
+        overflow-y: auto;
+        margin-top: 0;
+    }
+
+    .modal-header {
+        padding: 1.25rem 1.25rem 1rem;
+        position: relative;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem 1.25rem 1.5rem;
+    }
+}

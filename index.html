@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hélio Junior — Corretor de Imóveis | Vila Velha - ES</title>
+    <meta name="description" content="Corretor de imóveis em Vila Velha e Grande Vitória. Atendimento personalizado, imóveis exclusivos. CRECI-ES 15090F. Fale agora pelo WhatsApp.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Playfair Display (títulos elegantes) + Inter (corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =============================================
+         HEADER
+         ============================================= -->
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="logo-icone">
+                    <i class="fas fa-house-chimney"></i>
+                </div>
+                <div class="leading-tight">
+                    <p class="text-white font-bold tracking-wide text-base" style="font-family: 'Playfair Display', serif;">HÉLIO JUNIOR</p>
+                    <p class="texto-dourado text-xs font-semibold tracking-widest uppercase">Corretor de Imóveis</p>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#sobre"       class="text-white/70 hover:text-white text-sm font-medium transition-colors">Sobre</a>
+                <a href="#imoveis"     class="text-white/70 hover:text-white text-sm font-medium transition-colors">Imóveis</a>
+                <a href="#contato"     class="btn-dourado text-sm">Falar no WhatsApp</a>
+            </nav>
+
+            <!-- Hambúrguer mobile -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="menu-mobile" class="hidden md:hidden bg-navy-escuro border-t border-dourado/20 px-6 pb-6 pt-2">
+            <nav class="flex flex-col gap-4">
+                <a href="#sobre"       class="text-white/70 hover:text-white text-sm font-medium transition-colors menu-mobile-link">Sobre</a>
+                <a href="#imoveis"     class="text-white/70 hover:text-white text-sm font-medium transition-colors menu-mobile-link">Imóveis</a>
+                <a href="#contato"     class="btn-dourado text-center text-sm menu-mobile-link">Falar no WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =============================================
+         HERO
+         ============================================= -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+
+        <!-- Ornamento decorativo -->
+        <div class="ornamento-hero"></div>
+
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="max-w-3xl">
+
+                <!-- Badge CRECI -->
+                <span class="badge-creci fade-in">
+                    <i class="fas fa-certificate text-xs"></i>
+                    CRECI-ES 15090F &nbsp;·&nbsp; Vila Velha - ES
+                </span>
+
+                <!-- Título -->
+                <h1 class="titulo-hero fade-in mt-6 mb-6">
+                    Realize o sonho do seu<br>
+                    <span class="texto-dourado">imóvel ideal</span><br>
+                    na Grande Vitória
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl fade-in">
+                    Atendimento personalizado, imóveis exclusivos e quem conhece cada detalhe do mercado de Vila Velha e Grande Vitória.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 fade-in">
+                    <a href="#" id="whatsapp-hero" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        Falar com o Hélio agora
+                    </a>
+                    <a href="#imoveis" class="btn-outline">
+                        Ver tipos de imóveis
+                        <i class="fas fa-arrow-down text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="flex flex-wrap gap-10 mt-16 fade-in">
+                    <div class="stat-item">
+                        <p class="stat-numero">Grande<br>Vitória</p>
+                        <p class="stat-label">Área de atuação</p>
+                    </div>
+                    <div class="stat-divisor"></div>
+                    <div class="stat-item">
+                        <p class="stat-numero">100%</p>
+                        <p class="stat-label">Atendimento personalizado</p>
+                    </div>
+                    <div class="stat-divisor"></div>
+                    <div class="stat-item">
+                        <p class="stat-numero">CRECI</p>
+                        <p class="stat-label">Corretor regulamentado</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =============================================
+         SOBRE O HÉLIO
+         ============================================= -->
+    <section id="sobre" class="py-20 bg-navy-medio">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+
+                <!-- Foto do Hélio -->
+                <div class="fade-in flex justify-center">
+                    <div class="foto-perfil-wrapper">
+                        <img src="assets/images/helio.jpg"
+                             alt="Hélio Junior — Corretor de Imóveis"
+                             class="foto-perfil">
+                        <!-- Selo CRECI sobreposto -->
+                        <div class="selo-creci">
+                            <i class="fas fa-certificate texto-dourado text-lg"></i>
+                            <span class="text-white font-bold text-xs">CRECI-ES<br>15090F</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto -->
+                <div class="fade-in">
+                    <span class="texto-dourado font-semibold text-sm uppercase tracking-widest">Quem é</span>
+                    <h2 class="titulo-secao mt-2 mb-6">
+                        Hélio Junior,<br>seu corretor de confiança
+                    </h2>
+                    <p class="text-white/65 leading-relaxed mb-6">
+                        Corretor de imóveis atuando em <strong class="text-white">Vila Velha e toda a Grande Vitória</strong>, Hélio Junior se especializa em encontrar imóveis exclusivos que combinam com o estilo de vida e o orçamento de cada cliente.
+                    </p>
+                    <p class="text-white/65 leading-relaxed mb-8">
+                        Com atendimento 100% personalizado, acompanha cada etapa do processo — da busca à assinatura — garantindo segurança e tranquilidade em uma das decisões mais importantes da sua vida.
+                    </p>
+
+                    <!-- Diferenciais -->
+                    <div class="flex flex-col gap-3">
+                        <div class="diferencial-item">
+                            <i class="fas fa-check-circle texto-dourado"></i>
+                            <span class="text-white/80">Imóveis exclusivos na Grande Vitória</span>
+                        </div>
+                        <div class="diferencial-item">
+                            <i class="fas fa-check-circle texto-dourado"></i>
+                            <span class="text-white/80">Atendimento personalizado do início ao fim</span>
+                        </div>
+                        <div class="diferencial-item">
+                            <i class="fas fa-check-circle texto-dourado"></i>
+                            <span class="text-white/80">Corretor regulamentado — CRECI-ES 15090F</span>
+                        </div>
+                        <div class="diferencial-item">
+                            <i class="fas fa-check-circle texto-dourado"></i>
+                            <span class="text-white/80">Resposta rápida via WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =============================================
+         TIPOS DE IMÓVEIS
+         ============================================= -->
+    <section id="imoveis" class="py-20 bg-navy-escuro">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-16 fade-in">
+                <span class="texto-dourado font-semibold text-sm uppercase tracking-widest">Portfólio</span>
+                <h2 class="titulo-secao mt-2">Imóveis Disponíveis</h2>
+                <p class="text-white/50 mt-4 max-w-xl mx-auto">
+                    Da busca ao contrato, cuido de tudo para você encontrar o imóvel certo.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Apartamentos -->
+                <div class="card-imovel fade-in">
+                    <div class="card-imovel-icone">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Apartamentos</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Studios, 2 e 3 quartos em condomínios de alto padrão em Vila Velha e Vitória.
+                    </p>
+                    <button class="link-saiba-mais" data-modal="apartamentos">
+                        Ver imóveis disponíveis <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Casas -->
+                <div class="card-imovel fade-in">
+                    <div class="card-imovel-icone">
+                        <i class="fas fa-house text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Casas</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Casas em condomínio fechado ou bairros nobres, com segurança e qualidade de vida.
+                    </p>
+                    <button class="link-saiba-mais" data-modal="casas">
+                        Ver imóveis disponíveis <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Lançamentos -->
+                <div class="card-imovel destaque fade-in">
+                    <div class="card-imovel-icone destaque-icone">
+                        <i class="fas fa-star text-2xl"></i>
+                    </div>
+                    <div class="badge-destaque">Em alta</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Lançamentos</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Os melhores lançamentos da Grande Vitória com condições exclusivas de pré-lançamento.
+                    </p>
+                    <button class="link-saiba-mais" data-modal="lancamentos">
+                        Ver lançamentos <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Comercial -->
+                <div class="card-imovel fade-in">
+                    <div class="card-imovel-icone">
+                        <i class="fas fa-store text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Imóveis Comerciais</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Salas, lojas e galpões para o seu negócio crescer no lugar certo.
+                    </p>
+                    <button class="link-saiba-mais" data-modal="comercial">
+                        Ver imóveis disponíveis <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Terrenos -->
+                <div class="card-imovel fade-in">
+                    <div class="card-imovel-icone">
+                        <i class="fas fa-map text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Terrenos</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Terrenos em áreas valorizadas para construir do seu jeito ou investir com segurança.
+                    </p>
+                    <button class="link-saiba-mais" data-modal="terrenos">
+                        Ver terrenos disponíveis <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Aluguel -->
+                <div class="card-imovel fade-in">
+                    <div class="card-imovel-icone">
+                        <i class="fas fa-key text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Aluguel de Imóveis</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Apartamentos, casas e imóveis comerciais para alugar na Grande Vitória com segurança e agilidade.
+                    </p>
+                    <button class="link-saiba-mais" data-modal="aluguel">
+                        Ver imóveis para alugar <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- =============================================
+         CTA FINAL
+         ============================================= -->
+    <section id="contato" class="py-24 cta-bg relative overflow-hidden">
+        <div class="ornamento-cta"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+
+            <span class="badge-creci fade-in">
+                <i class="fas fa-house-chimney text-xs"></i>
+                Seu próximo imóvel começa aqui
+            </span>
+
+            <h2 class="titulo-hero fade-in mt-6 mb-6">
+                Pronto para encontrar<br>
+                o imóvel <span class="texto-dourado">dos seus sonhos?</span>
+            </h2>
+
+            <p class="text-white/65 text-lg mb-10 max-w-lg mx-auto fade-in">
+                Entre em contato agora mesmo.
+            </p>
+
+            <a href="#" id="whatsapp-cta" class="btn-whatsapp-grande fade-in">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                Falar com o Hélio no WhatsApp
+            </a>
+
+            <p class="text-white/40 mt-8 text-sm fade-in">
+                <i class="fas fa-lock mr-2"></i>Seus dados estão seguros. Sem spam, só atendimento de qualidade.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
+    <footer class="bg-navy-escuro border-t border-dourado/15 py-10">
+        <div class="container mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+                <!-- Logo footer -->
+                <img src="assets/images/logo.jpg" alt="Hélio Junior — Corretor de Imóveis" class="logo-footer">
+
+                <!-- Links -->
+                <nav class="flex flex-wrap gap-6 justify-center">
+                    <a href="#sobre"       class="text-white/40 hover:text-white text-sm transition-colors">Sobre</a>
+                    <a href="#imoveis"     class="text-white/40 hover:text-white text-sm transition-colors">Imóveis</a>
+                    <a href="#contato"     class="text-white/40 hover:text-white text-sm transition-colors">Contato</a>
+                </nav>
+
+                <!-- CRECI + direitos -->
+                <div class="text-right text-center md:text-right">
+                    <p class="texto-dourado text-xs font-semibold tracking-wider mb-1">CRECI-ES 15090F</p>
+                    <p class="text-white/25 text-xs">© 2025 Hélio Junior. Todos os direitos reservados.</p>
+                </div>
+
+            </div>
+
+            <!-- Google Meu Negócio -->
+            <div id="bloco-google" class="border-t border-white/10 mt-8 pt-6 flex justify-center">
+                <a href="#" id="link-google" target="_blank" rel="noopener"
+                   class="flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors group">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Ver no Google Meu Negócio
+                    <i class="fas fa-arrow-up-right-from-square text-xs opacity-60 group-hover:opacity-100"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- =============================================
+         BOTÃO FLUTUANTE WHATSAPP
+         ============================================= -->
+    <a href="#" id="whatsapp-float" class="whatsapp-float" title="Falar com o Hélio no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <!-- =============================================
+         MODAL DE IMÓVEIS
+         ============================================= -->
+    <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
+        <div class="modal-container">
+
+            <!-- Cabeçalho do modal -->
+            <div class="modal-header">
+                <div>
+                    <h3 id="modal-titulo" class="modal-titulo"></h3>
+                    <p class="modal-subtitulo">Clique em "Tenho interesse" para falar com o Hélio sobre o imóvel específico.</p>
+                </div>
+                <button id="modal-fechar" class="modal-fechar" aria-label="Fechar">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Grid de imóveis (preenchido pelo JS) -->
+            <div id="modal-grid" class="modal-grid"></div>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

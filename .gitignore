@@ -1,0 +1,7 @@
+# Imagens do cliente (fotos pessoais e logo — não subir)
+assets/images/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
